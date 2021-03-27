@@ -6,6 +6,11 @@
 {% block content %}
 <h1>Домашняя страница</h1>
 <img class="bookcover" src="{% static 'images/book5rings.jpeg' %}">
+<form class="form-inline mt-2 mt-md-0" action="{% url 'search_results' %}"
+method="get">
+  <input name="q" class="form-control mr-sm-2" type="text" placeholder="Поиск"
+  aria-label="Search">
+</form>  
 {% if user.is_authenticated %}
   <p>Привет, {{ user.email }}!</p>
   <p><a href="{% url 'account_logout' %}">Выйти</a></p>
