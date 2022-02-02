@@ -6,7 +6,7 @@ services:
     command: gunicorn bookstore_project.wsgi -b 0.0.0.0:8000  
     environment:
       - ENVIRONMENT=production
-      - SECRET_KEY=pv#!aj$$+827+d6x@op!u@v15rdo$$bl(qq#8wzmq4=fxa0a_73h 
+      - SECRET_KEY=
       - DEBUG=0
     volumes: 
       - .:/code
